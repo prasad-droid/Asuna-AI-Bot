@@ -1,0 +1,166 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+body {
+  display: flex;
+  background: #a675da;
+}
+main {
+  width: 70%;
+  height: 100vh;
+  background: url(bot2.webp) no-repeat;
+  /* background: url(https://cdn.vectorstock.com/i/1000x1000/39/94/cute-robot-error-modern-artificial-intelligence-vector-15533994.webp) no-repeat; */
+  background-size: 85%;
+  background-position: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-end;
+  z-index: 0;
+}
+h1 {
+  font-size: 5vw;
+  color: #043058;
+  /* font-family: Azonix; */
+  /* text-shadow: rgb(49, 49, 49) 15px 4px .3vw; */
+}
+.output-area {
+  width: 300px;
+  height: 100%;
+  z-index: 1;
+  /* background: #000; */
+  position: absolute;
+  left: 45%;
+  overflow: hidden;
+}
+.output{
+  position: fixed;
+  top: 5%;
+  /* margin-left: 300px; */
+  -webkit-border-top-left-radius: 80px;
+  -webkit-border-top-right-radius: 100px;
+  -webkit-border-bottom-right-radius: 100px;
+  -moz-border-radius-topleft: 80px;
+  -moz-border-radius-topright: 100px;
+  -moz-border-radius-bottomright: 100px;
+  border-top-left-radius: 80px;
+  border-top-right-radius: 100px;
+  border-bottom-right-radius: 100px;
+  min-width: 5vw;
+  max-width: 23vw;
+  min-height: 10vh;
+  height: auto;
+  background: #042f58cb;
+  z-index: 1;
+  color: white;
+  text-align: center;
+  word-wrap: break-word;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: sans-serif;
+}
+.chats {
+  width: 30%;
+  height: 100vh;
+  background: #bb9eda;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+}
+input {
+  border: none;
+  outline: none;
+  padding: 10px;
+  align-self: center;
+  width: 73%;
+  border-radius: 12px 12px 0 0;
+  margin-right:5px ;
+}
+.inp {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.buttons{
+  display: flex;
+  background-color: white;
+  border-radius: 12px 0 0 0;
+}
+.messages {
+  margin: 5px;
+  min-height: 30vh;
+  /* height: 100%; */
+  position: absolute;
+  bottom: 50px;
+  overflow: scroll;
+  overflow-x: hidden;
+}
+.messages::-webkit-scrollbar {
+  width: 0px;
+}
+.container {
+  border: 2px solid #dedede;
+  color: white;
+  background-color: #b26cfd;
+  border-radius: 5px;
+  padding: 10px;
+  min-width: 14.641288433382vw;
+  width: auto;
+  word-wrap: break-word;
+  /* max-width: 250px; */
+  min-height: 50px;
+  height: fit-content;
+  margin: 10px 0;
+  float: left;
+}
+
+.darker {
+  border-color: #ccc;
+  /* background-color: #ddd; */
+  background: #013b70b2;
+  position: relative;
+  right: 0;
+  float: right;
+}
+
+.container::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+.container img {
+  float: left;
+  max-width: 60px;
+  width: 100%;
+  margin-right: 20px;
+  border-radius: 50%;
+}
+
+.container img.right {
+  float: right;
+  margin-left: 20px;
+  margin-right: 0;
+}
+
+.time-right {
+  float: right;
+  color: #aaa;
+}
+
+.time-left {
+  float: left;
+  color: #999;
+}
+
+button{
+  background: none;
+  border: none;
+
+}
