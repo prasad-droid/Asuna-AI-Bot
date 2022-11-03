@@ -136,6 +136,12 @@ function response() {
     Name = document.getElementById("input").value;
     Name = Name.slice(5, Name.length);
     location.assign("https://www.youtube.com/results?search_query=" + Name);
+    resp = `playing {name} on youtube`;
+    msg.innerHTML = `
+         <img src="bot2.webp" alt="Avatar" style="width:100%;">
+         <p>${resp}</p>
+         <span class="time-left">${d.getHours() + ":" + d.getMinutes()}</span>
+    `;
   } else {
     resp = "I don't get it can You repeat again ";
     msg.innerHTML = `
