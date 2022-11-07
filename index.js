@@ -146,10 +146,10 @@ function response() {
          <span class="time-left">${d.getHours() + ":" + d.getMinutes()}</span>
     `;
     speak();
-    // } else if (inp.includes("weather")) {
+     } //else if (inp.includes("weather")) {
     //   getdata();
     //   inp.value = " ";
-    // } else if (inp.includes("bye")) {
+     else if (inp.includes("bye")) {
     resp = `Bye ${user}.. Have a Good Day !!`;
     msg.innerHTML = `
          <img src="bot2.webp" alt="Avatar" style="width:100%;">
