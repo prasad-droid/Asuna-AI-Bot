@@ -2,10 +2,12 @@
   padding: 0;
   margin: 0;
 }
+
 body {
   display: flex;
   background: #a675da;
 }
+
 main {
   width: 70%;
   height: 100vh;
@@ -19,12 +21,14 @@ main {
   justify-content: flex-end;
   z-index: 0;
 }
+
 h1 {
   font-size: 5vw;
   color: #043058;
   /* font-family: Azonix; */
   /* text-shadow: rgb(49, 49, 49) 15px 4px .3vw; */
 }
+
 .output-area {
   width: 300px;
   height: 100%;
@@ -34,7 +38,8 @@ h1 {
   left: 45%;
   overflow: hidden;
 }
-.output{
+
+.output {
   position: fixed;
   top: 5%;
   /* margin-left: 300px; */
@@ -61,6 +66,7 @@ h1 {
   justify-content: center;
   font-family: sans-serif;
 }
+
 .chats {
   width: 30%;
   height: 100vh;
@@ -70,6 +76,7 @@ h1 {
   position: relative;
   font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
 }
+
 input {
   border: none;
   outline: none;
@@ -77,8 +84,9 @@ input {
   align-self: center;
   width: 73%;
   border-radius: 12px 12px 0 0;
-  margin-right:5px ;
+  margin-right: 5px;
 }
+
 .inp {
   position: absolute;
   bottom: 0;
@@ -87,23 +95,26 @@ input {
   align-items: center;
   justify-content: space-between;
 }
-.buttons{
+
+.buttons {
   display: flex;
   background-color: white;
   border-radius: 12px 0 0 0;
 }
+
 .messages {
   margin: 5px;
   min-height: 30vh;
-  /* height: 100%; */
   position: absolute;
   bottom: 50px;
   overflow: scroll;
   overflow-x: hidden;
 }
+
 .messages::-webkit-scrollbar {
   width: 0px;
 }
+
 .container {
   border: 2px solid #dedede;
   color: white;
@@ -111,12 +122,13 @@ input {
   border-radius: 5px;
   padding: 10px;
   min-width: 14.641288433382vw;
-  width: auto;
+  width: 20vw;
   word-wrap: break-word;
   /* max-width: 250px; */
   min-height: 50px;
-  height: fit-content;
+  max-height: 20vh;
   margin: 10px 0;
+  overflow: hidden;
   float: left;
 }
 
@@ -159,7 +171,7 @@ input {
   color: #999;
 }
 
-button{
+button {
   background: none;
   border: none;
 
