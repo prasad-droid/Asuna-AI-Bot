@@ -146,10 +146,10 @@ function response() {
          <span class="time-left">${d.getHours() + ":" + d.getMinutes()}</span>
     `;
     speak();
-     } //else if (inp.includes("weather")) {
+    // } else if (inp.includes("weather")) {
     //   getdata();
     //   inp.value = " ";
-     else if (inp.includes("bye")) {
+  } else if (inp.includes("bye")) {
     resp = `Bye ${user}.. Have a Good Day !!`;
     msg.innerHTML = `
          <img src="bot2.webp" alt="Avatar" style="width:100%;">
@@ -157,7 +157,6 @@ function response() {
          <span class="time-left">${d.getHours() + ":" + d.getMinutes()}</span>
     `;
     speak();
-    lag;
   } else if (inp.includes("play")) {
     Name = document.getElementById("input").value;
     Name = Name.slice(5, Name.length);
@@ -169,6 +168,8 @@ function response() {
     `;
     speak();
     location.assign("https://www.youtube.com/results?search_query=" + Name);
+  } else if (inp.includes("who") || "where" || "what") {
+    search();
   } else {
     resp = "I don't get it can You repeat again ";
     msg.innerHTML = `
@@ -249,3 +250,43 @@ function speak() {
   lag;
   console.log("speakingggg");
 }
+
+function search() {
+  searchTerm = $("#input").val();
+  // searchTerm = "python";
+  let surl =
+    "https://en.wikipedia.org/w/api.php?action=query&prop=extracts&origin=*&format=json&generator=search&gsrnamespace=0&gsrlimit=1&gsrsearch=" +
+    searchTerm;
+  $.ajax({
+    url: surl,
+    header: {
+      "Access-Control-Allow-Origin": "*",
+      "Content-Type": "application/json",
+    },
+    method: "GET",
+    dataType: "jsonp",
+    data: "",
+    success: function (data) {
+      console.log(data.query.pages);
+      dataNum = Object.keys(data.query.pages)[0];
+      // $("#resultArea").empty();
+      // let newTitle =
+      //   '<h1 class="alert alert-info text-center"><strong>' +
+      //   data.query.pages[dataNum].title +
+      //   "</strong></h1>";
+      // $("#resultArea").html(
+      //   `${newTitle}<div>${data.query.pages[dataNum].extract}</div>`
+      // );
+      resp = `${data.query.pages[dataNum].extract.slice(0, 100)}`;
+      resp.replace(/<[^>]*>?/gm, "");
+      msg.innerHTML = `
+           <img src="bot2.webp" alt="Avatar" style="width:100%;">
+           <p>${resp}</p>
+           <span class="time-left"></span>
+      `;
+      speak();
+      console.log(data);
+    },
+  });
+}
+// search();
