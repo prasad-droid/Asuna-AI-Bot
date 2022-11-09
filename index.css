@@ -126,7 +126,7 @@ input {
   word-wrap: break-word;
   /* max-width: 250px; */
   min-height: 50px;
-  max-height: 20vh;
+  max-height: 30vh;
   margin: 10px 0;
   overflow: hidden;
   float: left;
